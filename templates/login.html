@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <style type="text/css">
+        body {
+            color: #999;
+            background: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .login-form {
+            width: 340px;
+            margin: 50px auto;
+        }
+
+        .login-form form {
+            margin-bottom: 15px;
+            background: #f7f7f7;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        .login-form h2 {
+            margin: 0 0 15px;
+        }
+
+        .form-control, .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+
+        .btn {
+            font-size: 16px;
+            background: #19aa8d;
+            border-radius: 3px;
+            border: none;
+            min-width: 140px;
+            outline: none !important;
+        }
+    </style>
+
+<div class="login-form">
+    {% if error %}
+        <p><strong>Error:</strong> {{ error }}
+    {% endif %}
+    <form action="http://127.0.0.1:5000/login_method" method="post">
+        <h2 class="text-center"><font color=#484848>Log in</font></h2>
+        <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email/Mobile No." required="required" name="email_id">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" required="required" name="password">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-block"><font color="black">Log in</font></button>
+        </div>
+        <div class="clearfix">
+            <label class="pull-left checkbox-inline"><input type="checkbox"><font color=#179b81> Remember
+                me</font></label>
+        </div>
+    </form>
+    <p class="text-center"><a href="#"><font color=#179b81>Create an Account</font></a></p>
+</div>
+
+{% endblock %}

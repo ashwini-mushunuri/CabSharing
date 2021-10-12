@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<style type="text/css">
+    .section {
+        position: relative;
+        height: 100vh;
+        background: rgba(47, 105, 177, 0.6);
+    }
+
+    .section .section-center {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+
+
+    .booking-cta {
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+
+    .booking-cta h1 {
+        font-size: 52px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .booking-cta p {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+
+
+</style>
+
+<div id="booking" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-md-push-5">
+                    <div class="booking-cta">
+                        <h1 align= 'center'>Your are now logged Out</h1>
+                        <p class="text-center" align="center"><a href="#  "><font color=#fff>Go back to homepage</font></a></p>
+                    </div>
+                </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{% endblock %}
